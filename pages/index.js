@@ -13,8 +13,21 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>Quiz - O Trem do Hype JS</title>
+      <title>Hype-Quiz - JavaScript</title>
+      <meta name="title" content="Hype-Quiz - JavaScript" />
+      <meta name="description" content="Embarque no trem do hype do JavaScript e teste seus conhecimentos." />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://hype-quiz.lucasbecker.vercel.app/" />
+      <meta property="og:title" content="Hype-Quiz - JavaScript" />
+      <meta property="og:description" content="Embarque no trem do hype do JavaScript e teste seus conhecimentos." />
       <meta property="og:image" content={db.bg} />
+
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://hype-quiz.lucasbecker.vercel.app/" />
+      <meta property="twitter:title" content="Hype-Quiz - JavaScript" />
+      <meta property="twitter:description" content="Embarque no trem do hype do JavaScript e teste seus conhecimentos." />
+      <meta property="twitter:image" content={db.bg} />
     </Head>
     <Background backgroundImage={db.bg}>
       <Container>
@@ -39,7 +52,7 @@ export default function Home() {
         </Widget>
         <Footer />
       </Container>
-      <GitHub projectUrl="https://github.com/lucasbecker/quiz" />
+      <GitHub projectUrl="https://github.com/lucasbecker/hype-quiz" />
     </Background>
     </>
   )
