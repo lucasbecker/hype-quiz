@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import db from '../db.json';
-import Background from '../src/components/QuizBackground';
-import Container from '../src/components/QuizContainer';
-import Logo from '../src/components/QuizLogo';
+import Background from '../src/components/Background';
+import Container from '../src/components/Container';
+import Logo from '../src/components/Logo';
 import Widget from '../src/components/Widget';
 import Form from '../src/components/Form';
 import Footer from '../src/components/Footer';
@@ -14,7 +14,7 @@ export default function Home() {
   const router = useRouter();
   const [name, setName] = useState();
 
-  function handlerSubmit(event) {
+  function handleSubmit(event) {
     event.preventDefault();
     router.push(`/quiz/?name=${name}`);
   }
@@ -26,20 +26,19 @@ export default function Home() {
         <Widget>
           <Widget.Header>
             <h1>
-              O Trem do Hype JavaScript
+              {db.title}
             </h1>
           </Widget.Header>
           <Widget.Content>
-            <p>
-              Embarque no trem do hypes e teste seus conhecimentos
-              sobre os fundamentos do JavaScript.
-            </p>
+            <p>{db.description}</p>
             <Form
-              onSubmit={handlerSubmit}
+              onSubmit={handleSubmit}
             >
               <Form.Input
                 placeholder="Informe seu nome"
                 onChange={(e) => setName(e.target.value)}
+                name="nome"
+                value={name}
                 required
               />
               <Form.Button

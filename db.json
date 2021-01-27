@@ -1,28 +1,120 @@
 {
   "bg": "https://images.unsplash.com/photo-1484689228555-fd6bc1b28b7e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "title": "O Trem do Hype JavaScript",
+  "description": "Embarque no trem do hypes e teste seus conhecimentos sobre os fundamentos do JavaScript.",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "Dentro de qual elemento HTML colocamos o JavaScript?",
       "description": "Essa é pra aquecer",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "<js>",
+        "<script>",
+        "<scripting>",
+        "<javascript>"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "Qual é a sintaxe correta do JavaScript para alterar o conteúdo do elemento HTML abaixo?",
+      "description": "Faz tempo em haha",
+      "answer": 1,
+      "alternatives": [
+        "document.getElement('p').innerHTML = 'Hello World!';",
+        "document.getElementById('demo').innerHTML = 'Hello World!';",
+        "document.getElementByName('p').innerHTML = 'Hello World!';",
+        "#demo.innerHTML = 'Hello World!';"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "Onde é o lugar correto para inserir um aquivo JavaScript em uma página HTML?",
+      "description": "Faz tempo em haha",
+      "answer": 2,
+      "alternatives": [
+        "No <footer>.",
+        "Apenas no <body>.",
+        "Pode ser na <head> ou no <body>.",
+        "Apenas na <head>."
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "Como você cria uma função em JavaScript?",
+      "description": "Da forma tradicional, não levando em conta as arrow functions.",
+      "answer": 2,
+      "alternatives": [
+        "function = myFunction()",
+        "function:myFunction()",
+        "function myFunction()"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "Como escrever uma condicional IF em JavaScript?",
+      "description": "O IF geralmente é a primeira estrutura condicional que aprendemos.",
+      "answer": 2,
+      "alternatives": [
+        "if i == 5 then",
+        "if i = 5",
+        "if (i == 5)",
+        "if i = 5 then"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "Como você pode adicionar um comentário em um JavaScript?",
+      "description": "Além do velho e bom /**/",
+      "answer": 2,
+      "alternatives": [
+        "<!--This is a comment-->",
+        "'This is a comment",
+        "//This is a comment"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "Qual é a maneira correta de escrever um array JavaScript?",
       "description": "Faz tempo em haha",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+        "var colors = ['red', 'green', 'blue']",
+        "var colors = 'red', 'green', 'blue'",
+        "var colors = (1:'red', 2:'green', 3:'blue')",
+        "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "Qual é a sintaxe correta do JavaScript para abrir uma nova janela chamada 'hp'?",
+      "description": "Faz tempo em haha",
+      "answer": 0,
+      "alternatives": [
+        "hp = window.open('http://www.hype-quiz.com');",
+        "hp = window.new('http://www.hype-quiz.com');"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "Como você declara uma variável JavaScript?",
+      "description": "Faz tempo em haha",
+      "answer": 3,
+      "alternatives": [
+        "var carName;",
+        "let carName;",
+        "const carName;",
+        "Todas as anteriores."
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif",
+      "title": "O JavaScript é case-sensitive?",
+      "description": "Ou seja, diferencia letras maiúsculas de minúsculas?",
+      "answer": 1,
+      "alternatives": [
+        "Mentira.",
+        "Verdade."
       ]
     }
   ],
@@ -32,7 +124,7 @@
   "theme": {
     "colors": {
       "primary": "#F7DF1E",
-      "secondary": "#F7DF1E",
+      "secondary": "#F7DF1E60",
       "mainBg": "#1C1814",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",

@@ -21,6 +21,12 @@ const Widget = styled.div`
   }
 `;
 
+Widget.Image = styled.img`
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+`;
+
 Widget.Header = styled.header`
   display: flex;
   justify-content: flex-start;
@@ -31,7 +37,7 @@ Widget.Header = styled.header`
   * {
     margin: 0;
   }
-  h1 {
+  h1, h2, p {
     color: ${({ theme }) => theme.colors.mainBg};
   }
 `;
