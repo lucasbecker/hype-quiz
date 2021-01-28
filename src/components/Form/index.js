@@ -40,38 +40,4 @@ Form.Button = styled.button`
   }
 `;
 
-Form.Alternative = styled.div`
-`;
-
-Form.Radio = styled.input`
-  display: none;
-`;
-
-Form.Label = styled.label`
-  outline: 0;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.contrastText};
-  background-color: ${({ theme }) => `${theme.colors.primary}30`};
-  padding: 10px 15px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  transition: .3s;
-  display: block;
-  word-wrap: break-word;
-  &:hover,
-  &:focus {
-    opacity: .5;
-  }
-  
-  input[type=radio]:checked + & {
-    background-color: ${({ theme }) => `${theme.colors.primary}`};
-    color: ${({ theme }) => theme.colors.mainBg};
-  }
-  input[type=radio]:checked + &:hover,
-  input[type=radio]:checked + &:focus {
-    opacity: 1;
-  }
-`;
-
 export default Form;

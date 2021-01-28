@@ -38,7 +38,6 @@ export default function Home() {
                 placeholder="Informe seu nome"
                 onChange={(e) => setName(e.target.value)}
                 name="nome"
-                value={name}
                 required
               />
               <Form.Button

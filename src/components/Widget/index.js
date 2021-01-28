@@ -13,7 +13,7 @@ const Widget = styled.div`
     line-height: 1;
     margin-bottom: 0;
   }
-  p {
+  p, li {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;

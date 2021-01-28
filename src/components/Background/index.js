@@ -10,7 +10,7 @@ const QuizBackground = styled.div`
   
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   @media screen and (max-width: 500px) {
     display: block;
