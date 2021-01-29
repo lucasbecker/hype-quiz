@@ -29,7 +29,7 @@ Widget.Image = styled.img`
 
 Widget.Header = styled.header`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 18px 32px;
   background-color: ${({ theme }) => theme.colors.primary};

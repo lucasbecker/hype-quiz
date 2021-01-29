@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';
 
 import { useRouter } from 'next/router';
 
-import db from '../db.json';
-import Background from '../src/components/Background';
-import Container from '../src/components/Container';
-import Logo from '../src/components/Logo';
-import Widget from '../src/components/Widget';
-import AlternativeForm from '../src/components/AlternativeForm';
-import GitHub from '../src/components/GitHubCorner';
-import Footer from '../src/components/Footer';
+import Background from '../../components/Background';
+import Container from '../../components/Container';
+import Logo from '../../components/Logo';
+import Widget from '../../components/Widget';
+import BackLinkArrow from '../../components/BackLinkArrow';
+import AlternativeForm from '../../components/AlternativeForm';
+import GitHub from '../../components/GitHubCorner';
+import Footer from '../../components/Footer';
 
 const screenStates = {
   QUIZ: 'QUIZ',
@@ -33,7 +33,7 @@ function LoadingWidget() {
 }
 
 function QuestionWidget({
-  name, totalQuestions, questionIndex, question, onSubmit, addResult,
+  totalQuestions, questionIndex, question, onSubmit, addResult,
 }) {
   const [selected, setSelected] = useState(undefined);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -45,15 +45,10 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         <h1>
-          Pronto para testar seus conhecimentos,
-          {' '}
-          {name}
-          ?
-        </h1>
-        <p>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
-        </p>
+        </h1>
       </Widget.Header>
       <Widget.Image
         alt="Descrição"
@@ -112,7 +107,7 @@ function QuestionWidget({
   );
 }
 
-function ResultWidget({ results, name }) {
+function ResultWidget({ results, name = 'Fulano' }) {
   const success = results.reduce((totalCurrent, resultCurrent) => {
     const isSuccess = resultCurrent === true;
     if (isSuccess) return totalCurrent + 1;
@@ -123,6 +118,7 @@ function ResultWidget({ results, name }) {
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         <h2>{`Última parada do Trem do Hype, ${name}!`}</h2>
       </Widget.Header>
 
@@ -147,7 +143,7 @@ function ResultWidget({ results, name }) {
   );
 }
 
-function QuizPage() {
+function QuizPage({ externalQuestions, externalBg }) {
   const router = useRouter();
   const params = router.query;
 
@@ -160,9 +156,9 @@ function QuizPage() {
     }, 1 * 1000);
   }, []);
 
-  const totalQuestions = db.questions.length;
   const [questionIndex, setQuestionIndex] = useState(0);
-  const question = db.questions[questionIndex];
+  const totalQuestions = externalQuestions.length;
+  const question = externalQuestions[questionIndex];
 
   function handleSubmit() {
     const nextQuestion = questionIndex + 1;
@@ -181,7 +177,7 @@ function QuizPage() {
   }
 
   return (
-    <Background backgroundImage={db.bg}>
+    <Background backgroundImage={externalBg}>
       <Container>
         <Logo />
         {screenState === screenStates.LOADING && (
